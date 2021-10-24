@@ -11,10 +11,10 @@ class FeedbackFormView extends StatelessWidget {
       body: Center(
         child: Container(
           width: MediaQuery.of(context).size.width - 36,
-          height: MediaQuery.of(context).size.height * 0.7,
+          height: MediaQuery.of(context).size.height * 0.72,
           decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(40),
+              borderRadius: BorderRadius.circular(20),
               boxShadow: [
                 BoxShadow(
                     offset: Offset(0, 2),
@@ -26,22 +26,23 @@ class FeedbackFormView extends StatelessWidget {
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(40),
-                  topRight: Radius.circular(40),
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(20),
                 ),
-                child: Image.network(
-                  'https://assets.volvocars.com/en-th/~/media/shared-assets/images/galleries/own/owner-info/vps/ev_vps_2_video.jpg',
+                child: Image.asset(
+                  'assets/images/service_volvo_photo.jpeg',
                   width: MediaQuery.of(context).size.width - 36,
                 ),
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 36),
               RatingBar.builder(
                 initialRating: 4,
-                ignoreGestures: true,
+                ignoreGestures: false,
                 minRating: 0,
+                glow: false,
                 direction: Axis.horizontal,
                 allowHalfRating: true,
-                itemSize: 50,
+                itemSize: 40,
                 itemCount: 5,
                 itemPadding: const EdgeInsets.symmetric(horizontal: 3.5),
                 itemBuilder: (context, _) =>
@@ -76,9 +77,9 @@ class FeedbackFormView extends StatelessWidget {
               Spacer(),
               Padding(
                 padding: const EdgeInsets.only(
-                  right: 24.0,
-                  left: 24,
-                  bottom: 36,
+                  right: 18.0,
+                  left: 18,
+                  bottom: 24,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -89,7 +90,7 @@ class FeedbackFormView extends StatelessWidget {
                       },
                       child: Container(
                         height: 56,
-                        width: MediaQuery.of(context).size.width / 2 - 52,
+                        width: MediaQuery.of(context).size.width / 2 - 45,
                         decoration: BoxDecoration(
                           color: const Color(0xFFDDE7FF),
                           borderRadius: BorderRadius.circular(12),
@@ -111,7 +112,7 @@ class FeedbackFormView extends StatelessWidget {
                       },
                       child: Container(
                         height: 56,
-                        width: MediaQuery.of(context).size.width / 2 - 52,
+                        width: MediaQuery.of(context).size.width / 2 - 45,
                         decoration: BoxDecoration(
                           color: const Color(0xFF162870),
                           borderRadius: BorderRadius.circular(12),
